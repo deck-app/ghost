@@ -11,11 +11,11 @@ $ docker-compose up --build -d
 
 Visit http://localhost or http://localhost/ghost
 
-<img width="1438" alt="screen shot 2018-01-13 at 16 19 37" src="https://user-images.githubusercontent.com/14105387/34907357-a7979968-f87d-11e7-8423-c8734cbc6fdd.png">
+<img width="1438" alt="screen shot 2018-01-13 at 16 19 37" src="https://github.com/deck-app/ghost/blob/master/localhost.png">
 
 Create a user
 
-<img width="470" alt="screen shot 2018-01-13 at 16 22 13" src="https://user-images.githubusercontent.com/14105387/34907394-29372d12-f87e-11e7-858f-a023d2b67cb9.png">
+<img width="470" alt="screen shot 2018-01-13 at 16 22 13" src="https://github.com/deck-app/ghost/blob/master/user.png">
 
 Verify if the user exists in MySQL
 ```
