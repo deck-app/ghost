@@ -27,16 +27,16 @@ user:
   #     INSTALL_XDEBUG
   # mysql_version:
   #   label:
-  #     MySQL version
+  #     DataBase version
   #   hint:
-  #     Select MySQL version
+  #     Select DataBase version
   #   type:
   #     select
   #   values:
-  #     - "5.0"
-  #     - "7.0"
+  #     - "mysql"
+  #     - "mariadb"
   #   target:
-  #     MYSQL_VERSION
+  #     DATABASE_VERSION
 
   # customize_server_root_path:
   #   label:
@@ -56,8 +56,8 @@ system:
     true
   #For collecting and storing DB in .env
   #db/user/password
-  # db_credentials:
-  #   true
+  db_credentials:
+    true
   #Generate public ports for the docker image
   ports:
     http:
