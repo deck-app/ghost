@@ -1,6 +1,6 @@
 FROM ghost:3.40.2
 
-LABEL MAINTAINER Naba Das <nabad600@gmail.com>
+LABEL MAINTAINER Naba Das <hello@get-deck.com>
 
 RUN apt-get update -y && \
     apt-get install -y default-mysql-client
