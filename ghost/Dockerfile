@@ -1,4 +1,4 @@
-FROM ghost:3.40.2
+FROM --platform=linux/x86_64 ghost:3.40.2
 
 LABEL MAINTAINER Naba Das <hello@get-deck.com>
 
