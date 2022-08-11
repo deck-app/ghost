@@ -1,28 +1,27 @@
 version: '3.0'
 services:
- mysql:  
-  build: 
-    context: './mysql'
-  volumes:
-    - '${DATA_PATH_HOST}:/var/lib/mysql'
-  environment:
-    MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
-    MYSQL_DATABASE: ${DB_NAME}
-    MYSQL_USER: ${DB_USER}
-    MYSQL_PASSWORD: ${DB_PASSWORD}
+#  mysql:  
+#   image: mariadb:${MARIADB_VERSION}
+#   volumes:
+#     - '${DATA_PATH_HOST}:/var/lib/mysql'
+#   environment:
+#     MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+#     MYSQL_DATABASE: ${DB_NAME}
+#     MYSQL_USER: ${DB_USER}
+#     MYSQL_PASSWORD: ${DB_PASSWORD}
  ghost:  
   build: ./ghost
   volumes:
-    - '${APP_CODE_PATH_HOST}:/var/lib/ghost/content'
+    - '${APP_CODE_PATH_HOST}:/ghost'
   ports:
     - '${GHOST_HTTP_PORT}:2368'
   environment:
-    database__client: mysql
-    database__connection__host: mysql
-    database__connection__user: ${DB_USER}
-    database__connection__password: ${DB_PASSWORD}
-    database__connection__database: ${DB_NAME}
-  depends_on:
-    - mysql
-  entrypoint: ["wait-for-it.sh", "mysql", "--", "docker-entrypoint.sh"]
-  command: ["node", "current/index.js"]
+    # database_client: mysql
+    # database_connection_host: mysql
+    # database_connection_user: ${DB_USER}
+    # database_connection_password: ${DB_PASSWORD}
+    # database_connection_database: ${DB_NAME}
+    UID: 1000
+    GID: 1000
+    ADDRESS: http://localhost:38065
+  # command: ["node", "current/index.js"]
