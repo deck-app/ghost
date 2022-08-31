@@ -21,7 +21,7 @@ services:
     database__connection__user: ${DB_USER}
     database__connection__password: ${DB_PASSWORD}
     database__connection__database: ${DB_NAME}
-    UID: 1000
-    GID: 1000
+    UID: 501
+    GID: 20
     # ADDRESS: http://localhost:38065
   command: ["node", "current/index.js"]
